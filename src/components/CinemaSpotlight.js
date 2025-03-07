@@ -28,7 +28,7 @@ const CinemaSpotlight = ({ title, movies }) => {
               key={movie.id}
               id={movie.id}
               poster={movie.poster}
-              type="movie"
+              type={movie.type}
             />
           ))}
         </div>

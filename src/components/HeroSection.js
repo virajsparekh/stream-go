@@ -54,7 +54,9 @@ const Hero = () => {
             style={{ backgroundImage: `url(${slide.image})` }}
           >
             <div className="slide-content">
-              <h2>{slide.title}</h2>
+            <h2 style={{ color: 'rgb(245, 158, 11)', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' }}>
+                {slide.title}
+                </h2>
               <p className="subtitle">{slide.subtitle}</p>
               <p className="highlight-text">{slide.text}</p>
               <button className="cta-btn">Explore Collection</button>
@@ -63,7 +65,6 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Navigation Arrows */}
       <button className="carousel-arrow prev-arrow" onClick={goToPrev}>
         &lt;
       </button>
@@ -71,7 +72,6 @@ const Hero = () => {
         &gt;
       </button>
 
-      {/* Dots Navigation */}
       <div className="dots-container">
         {slides.map((_, index) => (
           <span 

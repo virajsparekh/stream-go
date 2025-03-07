@@ -51,7 +51,9 @@ const Home = () => {
 
   //10 random movies and TV shows combined
   const getRandomMoviesAndShows = (movies, tvShows, count = 10) => {
-    const combined = [...movies, ...tvShows];
+    const moviesWithType = movies.map(movie => ({ ...movie, type: 'movie' }));
+    const tvShowsWithType = tvShows.map(show => ({ ...show, type: 'tvshow' }));
+    const combined = [...moviesWithType, ...tvShowsWithType];
     return combined
       .sort(() => 0.5 - Math.random())
       .slice(0, count);
