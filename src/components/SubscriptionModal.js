@@ -3,7 +3,7 @@ import "../styles/SubscriptionModal.css";
 
 const plans = [
   { name: "Basic", price: "$5.99/mo" },
-  { name: "Standard", price: "$10.99/mo" },
+  { name: "Standard", price: "$8.99/mo" },
   { name: "Premium", price: "$15.99/mo" },
 ];
 
