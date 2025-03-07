@@ -2,7 +2,7 @@
   "name": "stream-go",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5002",
+  "proxy": "http://localhost:5004",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -21,8 +21,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test", 
+    "eject": "react-scripts eject", 
+    "serve": "react-scripts serve" 
   },
   "eslintConfig": {
     "extends": [
@@ -44,7 +45,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.9"
+    "postcss": "^8.5.3"
   }
 }
