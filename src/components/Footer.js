@@ -18,14 +18,7 @@ const Footer = () => {
             <li><Link to="/movies">Movies</Link></li>
             <li><Link to="/tvshows">TV Shows</Link></li>
             <li><Link to="/about">About</Link></li>
-            <li>
-              <a
-                href="mailto:virajparekh777@gmail.com?subject=Contact%20Us&body=Hello%20Stream-Go%20Team,"
-                className="nav-link"
-              >
-                Contact
-              </a>
-            </li>
+            <li><Link to="/about">Contact</Link></li>
           </ul>
         </div>
 
