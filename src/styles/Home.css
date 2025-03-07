@@ -70,24 +70,3 @@ section h3 {
   margin-bottom: 20px;
   font-size: 1.5rem;
 }
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .movies-container {
-    padding: 0 15px;
-  }
-
-  section h3 {
-    margin-left: 15px;
-    font-size: 1.3rem;
-  }
-
-  .scroll-arrow {
-    width: 30px;
-    height: 50px;
-  }
-  
-  .home h2 {
-    font-size: 2rem;
-  }
-}
