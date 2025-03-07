@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E2E;
+    color: #E5E7EB; 
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
