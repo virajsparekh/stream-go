@@ -1,0 +1,27 @@
+body {
+    background-color: #1E1E2E;
+    color: #A5B4FC;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .dark-mode {
+    background-color: #E5E7EB;
+    color: #444;
+  }
+  
+  .dark-mode-toggle {
+    background: transparent;
+    border: none;
+    padding: 8px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #1E1E2E;
+    border: 1px solid #f59e0b;
+  }
+  
+  .dark-mode-toggle:hover {
+    background: #d88c07;
+  }
+  

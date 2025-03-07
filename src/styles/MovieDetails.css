@@ -1,0 +1,106 @@
+.movie-details {
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .details-container {
+    display: flex;
+    background: #2E2E48;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .poster-container {
+    width: 40%;
+  }
+  
+  .poster-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .info-container {
+    width: 60%;
+    padding: 20px;
+  }
+  
+  .info-container h1 {
+    font-size: 2rem;
+    color: #F59E0B;
+  }
+  
+  .synopsis {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+  
+  .pricing {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  
+  .rent-price {
+    color: #F59E0B;
+  }
+  
+  .purchase-price {
+    color: #28A745;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .play-btn, .rent-btn, .buy-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .play-btn {
+    background: #F59E0B;
+    color: #1E1E2E;
+  }
+  
+  .rent-btn {
+    background: #3498DB;
+    color: white;
+  }
+  
+  .buy-btn {
+    background: #28A745;
+    color: white;
+  }
+  
+  .play-btn:hover {
+    background: #d88c07;
+  }
+  
+  .rent-btn:hover {
+    background: #2980B9;
+  }
+  
+  .buy-btn:hover {
+    background: #218838;
+  }
+  
+  .error-text, .loading-text {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #E5E7EB;
+  }
+  
