@@ -8,9 +8,8 @@ const TVShows = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Refs for scroll containers
-  const allTvShowsRef = useRef(null); // Ref for "All TV Shows" section
-  const languageRefs = useRef({}); // Refs for language-specific sections
+  const allTvShowsRef = useRef(null); 
+  const languageRefs = useRef({}); 
 
   useEffect(() => {
     const fetchTvShows = async () => {
@@ -29,7 +28,6 @@ const TVShows = () => {
     fetchTvShows();
   }, []);
 
-  // Group TV shows by language
   const groupByLanguage = (items) => {
     return items.reduce((acc, item) => {
       const language = item.language || "Unknown";
@@ -41,7 +39,6 @@ const TVShows = () => {
     }, {});
   };
 
-  // Scroll functionality
   const scroll = (ref, direction) => {
     if (ref.current) {
       const scrollAmount = direction === "left" ? -500 : 500;
@@ -82,9 +79,7 @@ const TVShows = () => {
         </button>
       </div>
 
-      {/* Language-Specific TV Shows Sections */}
       {Object.keys(tvShowsByLanguage).map((language) => {
-        // Create a unique ref for each language section
         if (!languageRefs.current[language]) {
           languageRefs.current[language] = React.createRef();
         }

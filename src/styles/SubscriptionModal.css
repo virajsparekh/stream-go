@@ -74,18 +74,3 @@
   padding: 4px;
   line-height: 1;
 }
-
-/* Responsive Design */
-@media (max-width: 480px) {
-  .sub-modal {
-    padding: 25px;
-  }
-  
-  .plan-card {
-    padding: 15px;
-  }
-  
-  .sub-modal h2 {
-    font-size: 1.5rem;
-  }
-}
