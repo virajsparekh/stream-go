@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles/AuthModal.css";
 
 const AuthModal = ({ isOpen, onClose }) => {
-  // ✅ Move useState to the top level (before any conditions)
   const [isLogin, setIsLogin] = useState(true);
 
   if (!isOpen) return null;

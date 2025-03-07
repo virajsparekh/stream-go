@@ -80,7 +80,7 @@ const Movies = () => {
       </div>
 
       {Object.keys(moviesByLanguage).map((language) => {
-        // Create a unique ref for each language section
+        
         if (!languageRefs.current[language]) {
           languageRefs.current[language] = React.createRef();
         }

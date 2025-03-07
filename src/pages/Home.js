@@ -13,7 +13,6 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Refs for scroll containers
   const moviesRef = useRef(null);
   const tvShowsRef = useRef(null);
 
