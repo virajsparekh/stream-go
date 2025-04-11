@@ -23,8 +23,8 @@ const TVShows = () => {
         setLoading(true);
         
         const [allShows, featuredShows] = await Promise.all([
-          axios.get("http://localhost:8080/api/tvshows"),
-          axios.get("http://localhost:8080/api/tvshows/featured")
+          axios.get("https://stream-go-backend-c347838fb856.herokuapp.com/api/tvshows"),
+          axios.get("https://stream-go-backend-c347838fb856.herokuapp.com/api/tvshows/featured")
         ]);
 
         setTvShows(allShows.data || []);

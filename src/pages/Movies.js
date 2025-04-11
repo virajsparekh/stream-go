@@ -27,10 +27,10 @@ const Movies = () => {
           indian,
           featuredIndian
         ] = await Promise.all([
-          axios.get("http://localhost:8080/api/movies"),
-          axios.get("http://localhost:8080/api/movies/featured"),
-          axios.get("http://localhost:8080/api/movies/indian"),
-          axios.get("http://localhost:8080/api/movies/featuredIndian")
+          axios.get("https://stream-go-backend-c347838fb856.herokuapp.com/api/movies"),
+          axios.get("https://stream-go-backend-c347838fb856.herokuapp.com/api/movies/featured"),
+          axios.get("https://stream-go-backend-c347838fb856.herokuapp.com/api/movies/indian"),
+          axios.get("https://stream-go-backend-c347838fb856.herokuapp.com/api/movies/featuredIndian")
         ]);
 
         const allMoviesData = allMovies.data || [];
