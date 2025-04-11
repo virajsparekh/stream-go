@@ -27,7 +27,7 @@ const CinemaSpotlight = ({ title, movies }) => {
             <MovieCard
               key={movie.id}
               id={movie.id}
-              poster={movie.poster}
+              poster={movie.smallPoster}
               type={movie.type}
             />
           ))}

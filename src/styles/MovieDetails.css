@@ -1,106 +1,290 @@
 .movie-details {
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  color: white;
+  min-height: 100vh;
+  background: #141414;
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+}
+
+.hero-banner {
+  position: relative;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 4rem 4rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.featured-badge {
+  background: linear-gradient(to right, #e50914, #b00710);
+  padding: 0.3rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #d2d2d2;
+}
+
+.rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.3rem 1rem;
+  border-radius: 4px;
+}
+
+.star-icon {
+  color: #f5c518;
+}
+
+.meta-item {
+  position: relative;
+}
+
+.meta-item:not(:last-child)::after {
+  content: '•';
+  position: absolute;
+  right: -0.9rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.play-button, .action-button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.play-button {
+  background: #d28b10;
+  color: white;
+}
+
+.play-button:hover {
+  background: #ec9807;
+  transform: scale(1.05);
+}
+
+.action-button {
+  background: rgba(109, 109, 110, 0.7);
+  color: white;
+}
+
+.action-button:hover {
+  background: rgba(109, 109, 110, 0.4);
+}
+
+.content-container {
+  padding: 0 4rem 4rem;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.synopsis-section {
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+}
+
+.synopsis-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.synopsis-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e5e5e5;
+}
+
+/* Info Section */
+.info-section {
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  max-height: 200px;
+}
+
+.info-section.expanded {
+  max-height: 1000px;
+}
+
+.info-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  border-bottom: 1px solid #404040;
+  padding-bottom: 0.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-item {
+  margin-bottom: 1rem;
+}
+
+.info-item strong {
+  color: #777;
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.info-item span {
+  font-size: 1.05rem;
+}
+
+.toggle-info-button {
+  background: transparent;
+  border: none;
+  color: #777;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.toggle-info-button:hover {
+  color: #fff;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.chevron.up {
+  transform: rotate(180deg);
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #c27b00;
+  border-radius: 50%;
+  border-top-color: #F59E0B;
+  animation: spin 1s ease-in-out infinite;
+  margin: 5rem auto;
+}
+
+.error-message, .not-found {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 5rem;
+  color: #e5e5e5;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 1024px) {
+  .hero-banner {
+      height: 65vh;
+      padding: 0 2rem 3rem;
   }
   
-  .details-container {
-    display: flex;
-    background: #2E2E48;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 80%;
-    max-width: 900px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  .hero-title {
+      font-size: 2.8rem;
   }
   
-  .poster-container {
-    width: 40%;
+  .content-container {
+      padding: 0 2rem 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+      height: 60vh;
+      padding: 0 1.5rem 2rem;
   }
   
-  .poster-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .hero-title {
+      font-size: 2.2rem;
   }
   
-  .info-container {
-    width: 60%;
-    padding: 20px;
+  .hero-buttons {
+      flex-wrap: wrap;
   }
   
-  .info-container h1 {
-    font-size: 2rem;
-    color: #F59E0B;
+  .info-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner {
+      height: 55vh;
+      padding: 0 1rem 1.5rem;
   }
   
-  .synopsis {
-    margin: 15px 0;
-    font-size: 1.1rem;
-    opacity: 0.8;
+  .hero-title {
+      font-size: 1.8rem;
   }
   
-  .pricing {
-    margin: 10px 0;
-    font-size: 1.2rem;
+  .hero-meta {
+      flex-wrap: wrap;
+      gap: 0.8rem;
   }
   
-  .rent-price {
-    color: #F59E0B;
+  .meta-item:not(:last-child)::after {
+      display: none;
   }
   
-  .purchase-price {
-    color: #28A745;
+  .play-button, .action-button {
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
   }
-  
-  .buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-  }
-  
-  .play-btn, .rent-btn, .buy-btn {
-    padding: 10px 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .play-btn {
-    background: #F59E0B;
-    color: #1E1E2E;
-  }
-  
-  .rent-btn {
-    background: #3498DB;
-    color: white;
-  }
-  
-  .buy-btn {
-    background: #28A745;
-    color: white;
-  }
-  
-  .play-btn:hover {
-    background: #d88c07;
-  }
-  
-  .rent-btn:hover {
-    background: #2980B9;
-  }
-  
-  .buy-btn:hover {
-    background: #218838;
-  }
-  
-  .error-text, .loading-text {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #E5E7EB;
-  }
-  
+}

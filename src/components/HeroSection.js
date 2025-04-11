@@ -30,7 +30,7 @@ const Hero = () => {
       setActiveIndex((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   const goToSlide = (index) => {
     setActiveIndex(index);
